@@ -17,3 +17,11 @@ if (menuButton && globalNav) {
     });
   });
 }
+
+// Email obfuscation - assembled at runtime to prevent bot scraping
+const mailLink = document.getElementById('mail-link');
+if (mailLink) {
+  const u = 'astryve.design';
+  const d = 'example.com';
+  mailLink.href = 'mailto:' + u + '@' + d;
+}
