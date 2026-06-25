@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | グラフィックデザイナー</title>
+    <meta
+      name="description"
+      content="SNS・Web・営業資料・採用資料・告知物など、企業のクリエイティブ制作を支援するデザイナーのポートフォリオです。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .profile-grid { display: grid; grid-template-columns: 200px 1fr; gap: 2.5rem; align-items: start; }
+      .avatar { width: 160px; height: 160px; border-radius: 50%; background: var(--placeholder); border: 2px solid var(--line); display: grid; place-items: center; color: #bbb; font-size: .85rem; }
+      .tag-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .8rem; }
+      .tag { background: var(--bg); border: 1px solid var(--line); border-radius: 2rem; padding: .3rem .85rem; font-size: .82rem; color: var(--muted); }
+      .skill-bar-wrap { display: grid; gap: 1rem; }
+      .skill-row { display: grid; grid-template-columns: 130px 1fr auto; align-items: center; gap: .75rem; font-size: .9rem; color: var(--muted); }
+      .bar-bg { height: 6px; background: var(--placeholder); border-radius: 3px; overflow: hidden; }
+      .bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-sub)); }
+      .tool-grid { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
+      .tool-chip { background: var(--card); border: 1px solid var(--line); border-radius: .5rem; padding: .4rem .9rem; font-size: .88rem; }
+      .work-meta { font-size: .82rem; color: #9a9aab; margin-bottom: .3rem; }
+      @media (max-width: 760px) {
+        .profile-grid { grid-template-columns: 1fr; }
+        .skill-row { grid-template-columns: 110px 1fr auto; font-size: .85rem; }
+      }
+      @media (max-width: 480px) {
+        .avatar { width: 120px; height: 120px; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="トップへ">Portfolio</a>
+
+        <button class="menu-toggle" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#service">対応できること</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn-primary btn-header" href="#contact">お問い合わせ</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="section hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">グラフィックデザイナー</p>
+            <h1 id="hero-title">SNS・Web・資料を、<br />伝わるデザインに整えます。</h1>
+            <p class="lead">
+              企業・団体のSNS投稿画像・バナー・営業資料・採用資料・Web画像・告知物など、毎月発生するクリエイティブ制作を担当します。
+              技術系・BtoB領域のサービスを分かりやすく伝えることが得意です。
+            </p>
+            <div class="tag-list">
+              <span class="tag">SNS投稿画像</span>
+              <span class="tag">バナー制作</span>
+              <span class="tag">営業資料</span>
+              <span class="tag">採用資料</span>
+              <span class="tag">LPデザイン</span>
+              <span class="tag">フライヤー</span>
+              <span class="tag">図解・インフォグラフィック</span>
+            </div>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#works">実績を見る</a>
+              <a class="btn btn-secondary" href="#contact">お問い合わせ</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="制作物のプレースホルダー">
+            <div class="placeholder tile">バナー</div>
+            <div class="placeholder tile">SNS投稿</div>
+            <div class="placeholder tile">営業資料</div>
+            <div class="placeholder tile">Web画面</div>
+            <div class="placeholder tile">フライヤー</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title">About</h2>
+          <div class="profile-grid">
+            <div class="avatar">写真プレースホルダー</div>
+            <div>
+              <h3 style="margin-bottom:.4rem;">お名前（Name）</h3>
+              <p class="eyebrow" style="margin-bottom:1rem;">グラフィックデザイナー</p>
+              <p style="color:var(--muted);">
+                SNS・Web・営業資料・採用資料・告知物など、企業のクリエイティブ制作を幅広く担当しています。
+                デザインの仕事を通じて、esports団体・SNS運用会社・BtoB SaaS・YouTube発信者など多様な分野の案件を経験しました。
+              </p>
+              <p style="color:var(--muted);">
+                世界観を整え、実際に使われる媒体に合わせて制作することを意識しています。
+                特に、技術系・BtoB領域の「伝わりにくいサービス」を視覚的に整理することが得意です。
+              </p>
+              <div class="grid cols-3" style="margin-top:1.5rem;">
+                <div class="card" style="text-align:center;">
+                  <p style="color:var(--accent);font-size:1.5rem;font-weight:700;margin:0;">30+</p>
+                  <p style="margin:0;font-size:.85rem;">制作案件数</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                  <p style="color:var(--accent);font-size:1.5rem;font-weight:700;margin:0;">1.2万</p>
+                  <p style="margin:0;font-size:.85rem;">サムネ最大再生数</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                  <p style="color:var(--accent);font-size:1.5rem;font-weight:700;margin:0;">5+</p>
+                  <p style="margin:0;font-size:.85rem;">継続支援社数</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <h2 id="skills-title">Skills</h2>
+          <div class="grid cols-2" style="gap:2rem;">
+            <div>
+              <h3>デザインスキル</h3>
+              <div class="skill-bar-wrap">
+                <div class="skill-row">
+                  <span>SNS/バナー</span>
+                  <div class="bar-bg"><div class="bar-fill" style="width:95%;"></div></div>
+                  <span>95%</span>
+                </div>
+                <div class="skill-row">
+                  <span>資料デザイン</span>
+                  <div class="bar-bg"><div class="bar-fill" style="width:90%;"></div></div>
+                  <span>90%</span>
+                </div>
+                <div class="skill-row">
+                  <span>LPデザイン</span>
+                  <div class="bar-bg"><div class="bar-fill" style="width:80%;"></div></div>
+                  <span>80%</span>
+                </div>
+                <div class="skill-row">
+                  <span>図解・情報整理</span>
+                  <div class="bar-bg"><div class="bar-fill" style="width:85%;"></div></div>
+                  <span>85%</span>
+                </div>
+                <div class="skill-row">
+                  <span>フライヤー</span>
+                  <div class="bar-bg"><div class="bar-fill" style="width:88%;"></div></div>
+                  <span>88%</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>使用ツール</h3>
+              <div class="tool-grid">
+                <span class="tool-chip">Figma</span>
+                <span class="tool-chip">Adobe Illustrator</span>
+                <span class="tool-chip">Adobe Photoshop</span>
+                <span class="tool-chip">Canva</span>
+                <span class="tool-chip">PowerPoint</span>
+                <span class="tool-chip">Google Slides</span>
+              </div>
+              <div style="margin-top:1.5rem;">
+                <h3>得意な領域</h3>
+                <div class="tag-list">
+                  <span class="tag">技術系 / AI・SaaS</span>
+                  <span class="tag">BtoB</span>
+                  <span class="tag">esports / ゲーム</span>
+                  <span class="tag">SNS運用支援</span>
+                  <span class="tag">採用・HR</span>
+                  <span class="tag">YouTube</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section class="section" id="works" aria-labelledby="works-title">
+        <div class="container">
+          <h2 id="works-title">Works</h2>
+          <div class="grid cols-2">
+            <article class="card work-card">
+              <div class="placeholder media">実績画像プレースホルダー</div>
+              <p class="work-meta">esports団体 / イベントクリエイティブ</p>
+              <h3>イベントロゴ・告知画像制作</h3>
+              <p>esports団体向けに、イベントロゴ・募集フライヤー・SNS告知画像などを一括制作。世界観を統一したデザインセットを納品。</p>
+              <div class="tag-list">
+                <span class="tag">ロゴ</span>
+                <span class="tag">フライヤー</span>
+                <span class="tag">SNS告知</span>
+              </div>
+            </article>
+            <article class="card work-card">
+              <div class="placeholder media">実績画像プレースホルダー</div>
+              <p class="work-meta">SNS運用会社 / 制作パートナー</p>
+              <h3>SNS投稿・バナー継続制作</h3>
+              <p>SNS運用代行会社のクライアント案件で、投稿画像・広告バナー・サムネイルなどを毎月継続制作するパートナーとして対応。</p>
+              <div class="tag-list">
+                <span class="tag">SNS投稿画像</span>
+                <span class="tag">バナー</span>
+                <span class="tag">サムネイル</span>
+              </div>
+            </article>
+            <article class="card work-card">
+              <div class="placeholder media">実績画像プレースホルダー</div>
+              <p class="work-meta">BtoBソフトウェア企業 / デザイン支援</p>
+              <h3>AI・SaaS企業向け資料・図解・Web支援</h3>
+              <p>複雑なサービス内容を分かりやすく整理した営業資料・図解・Webファーストビュー改善を担当。導入決定率の向上に貢献。</p>
+              <div class="tag-list">
+                <span class="tag">営業資料</span>
+                <span class="tag">図解</span>
+                <span class="tag">Web改善</span>
+              </div>
+            </article>
+            <article class="card work-card">
+              <div class="placeholder media">実績画像プレースホルダー</div>
+              <p class="work-meta">YouTube発信者 / サムネイルデザイン</p>
+              <h3>YouTubeサムネイル制作</h3>
+              <p>制作したサムネイルを使用した動画が1.2万再生を記録。クリック率向上を目的とした視認性・訴求力の高いビジュアルを制作。</p>
+              <div class="tag-list">
+                <span class="tag">サムネイル</span>
+                <span class="tag">YouTube</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service / 対応できること -->
+      <section class="section section-alt" id="service" aria-labelledby="service-title">
+        <div class="container">
+          <h2 id="service-title">対応できること</h2>
+          <div class="grid cols-2">
+            <article class="card">
+              <h3>SNS / 広告クリエイティブ</h3>
+              <ul>
+                <li>SNS投稿画像（Instagram・X・Facebook）</li>
+                <li>広告バナー</li>
+                <li>キャンペーン画像</li>
+                <li>YouTubeサムネイル</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>営業 / 採用資料</h3>
+              <ul>
+                <li>営業資料・会社紹介資料</li>
+                <li>採用資料・説明会資料</li>
+                <li>提案書テンプレート</li>
+                <li>導入事例資料</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Web / LP</h3>
+              <ul>
+                <li>LPデザイン</li>
+                <li>ファーストビュー改善</li>
+                <li>Web画像差し替え</li>
+                <li>CTA改善・実績追加</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>イベント / 団体</h3>
+              <ul>
+                <li>イベントロゴ</li>
+                <li>告知キービジュアル</li>
+                <li>フライヤー</li>
+                <li>協賛資料・募集画像</li>
+              </ul>
+            </article>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <h3>対応形態</h3>
+            <div class="grid cols-3" style="margin-top:.8rem;">
+              <article class="card">
+                <h3>スポット制作</h3>
+                <p>ロゴ・バナー・資料など単発の制作に対応します。</p>
+              </article>
+              <article class="card">
+                <h3>月額継続支援</h3>
+                <p>毎月発生するSNS画像・資料・Web更新などをまとめてお任せいただけます。</p>
+              </article>
+              <article class="card">
+                <h3>制作パートナー</h3>
+                <p>SNS運用会社・広告代理店・制作会社からの協力会社としての対応も可能です。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 id="faq-title">よくある質問</h2>
+          <div class="faq-list">
+            <details class="card" open><summary>どんな依頼でも相談できますか？</summary><p>はい。SNS画像・バナー・資料・フライヤー・Web画像など、幅広くご相談いただけます。まず何が必要かを一緒に整理します。</p></details>
+            <details class="card"><summary>技術系・BtoBのサービスでも対応できますか？</summary><p>はい。AI・ソフトウェア・業務改善サービスなど、伝わりにくいサービスの整理・図解化が得意です。</p></details>
+            <details class="card"><summary>継続依頼は何ヶ月から可能ですか？</summary><p>まず1ヶ月から相談可能です。継続前提の場合は3ヶ月単位を推奨します。</p></details>
+            <details class="card"><summary>社内にデザイン担当がいなくても大丈夫ですか？</summary><p>はい。目的の確認や必要な制作物の整理からサポートします。</p></details>
+            <details class="card"><summary>SNS運用会社・広告代理店からの依頼も受けていますか？</summary><p>はい。クライアント案件の制作パートナーとしても対応可能です。守秘義務にも対応します。</p></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact-cta section-alt" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title">お仕事・ご相談のご連絡はこちらから</h2>
+          <p class="section-text">
+            SNS・Web・資料・告知物など、制作物の内容はお気軽にご相談ください。<br />
+            まずはヒアリングから始めます。
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" id="mail-link-portfolio" href="#contact">メールで問い合わせる</a>
+          </div>
+          <div class="grid cols-3" style="margin-top:2rem;">
+            <article class="card" style="text-align:center;">
+              <p style="margin:0;font-size:.9rem;color:var(--muted);">返信目安</p>
+              <p style="margin:.3rem 0 0;font-weight:600;">24時間以内</p>
+            </article>
+            <article class="card" style="text-align:center;">
+              <p style="margin:0;font-size:.9rem;color:var(--muted);">対応形態</p>
+              <p style="margin:.3rem 0 0;font-weight:600;">リモート・オンライン</p>
+            </article>
+            <article class="card" style="text-align:center;">
+              <p style="margin:0;font-size:.9rem;color:var(--muted);">受付</p>
+              <p style="margin:.3rem 0 0;font-weight:600;">スポット・月額どちらも可</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="logo">Portfolio</p>
+          <p>SNS・Web・資料を、伝わるデザインに。</p>
+        </div>
+        <nav aria-label="フッターナビゲーション">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#service">対応できること</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">© 2026 All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const portfolioMailLink = document.getElementById('mail-link-portfolio');
+      if (portfolioMailLink) {
+        const u = 'seiyo.kentstyle';
+        const d = 'gmail.com';
+        portfolioMailLink.href = 'mailto:' + u + '@' + d;
+      }
+    </script>
+  </body>
+</html>
