@@ -3,7 +3,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches:
-      - claude/site-appearance-question-aoek72
+      - main
   workflow_dispatch:
 
 permissions:
