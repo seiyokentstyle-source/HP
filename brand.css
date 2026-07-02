@@ -1,0 +1,243 @@
+/* ===============================================
+   Astryve Design ブランドテーマ（index.html 専用）
+   Brand kit: #FF3FA4 / #7B4DFF / #0B0B12 / #1A1A24 / #F7F7FA
+   =============================================== */
+
+.brand {
+  --bg: #0b0b12;
+  --bg-alt: #12121c;
+  --text: #f7f7fa;
+  --muted: #c3c3d1;
+  --line: #2a2a3a;
+  --accent: #ff3fa4;
+  --accent-sub: #7b4dff;
+  --placeholder: #1a1a24;
+  --card: #15151f;
+}
+
+/* --- 星空 + ブループリントグリッドの背景レイヤー --- */
+.brand::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, rgba(247, 247, 250, 0.7), transparent 100%),
+    radial-gradient(1px 1px at 34% 68%, rgba(247, 247, 250, 0.4), transparent 100%),
+    radial-gradient(1.5px 1.5px at 58% 14%, rgba(255, 63, 164, 0.6), transparent 100%),
+    radial-gradient(1px 1px at 72% 42%, rgba(247, 247, 250, 0.5), transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 76%, rgba(123, 77, 255, 0.6), transparent 100%),
+    radial-gradient(1px 1px at 46% 88%, rgba(247, 247, 250, 0.35), transparent 100%),
+    radial-gradient(1px 1px at 8% 82%, rgba(255, 63, 164, 0.4), transparent 100%),
+    radial-gradient(1.5px 1.5px at 94% 8%, rgba(247, 247, 250, 0.5), transparent 100%),
+    linear-gradient(rgba(123, 77, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123, 77, 255, 0.045) 1px, transparent 1px);
+  background-size:
+    auto, auto, auto, auto, auto, auto, auto, auto,
+    52px 52px, 52px 52px;
+}
+
+/* --- グラデーションテキスト共通 --- */
+.brand .grad {
+  background: linear-gradient(120deg, var(--accent), var(--accent-sub));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- ロゴロックアップ --- */
+.brand .brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.brand .brand-mark {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  filter: drop-shadow(0 0 6px rgba(255, 63, 164, 0.45));
+}
+.brand .brand-text {
+  display: grid;
+  line-height: 1.15;
+}
+.brand .brand-name {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  font-size: 1.02rem;
+}
+.brand .brand-sub {
+  font-size: 0.56rem;
+  letter-spacing: 0.52em;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent), var(--accent-sub));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand .brand-sub::before { content: "\2726\0020"; }
+.brand .brand-sub::after { content: "\0020\2726"; }
+
+/* --- ヘッダー --- */
+.brand .site-header {
+  background: rgba(11, 11, 18, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(123, 77, 255, 0.28);
+}
+.brand .global-nav a {
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.brand .global-nav a:hover { color: var(--accent); }
+
+/* --- 見出し（ブランドキットのラベル風装飾） --- */
+.brand h2 {
+  position: relative;
+  padding-bottom: 0.65rem;
+  letter-spacing: 0.04em;
+}
+.brand h2::before {
+  content: "\2726";
+  color: var(--accent);
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+}
+.brand h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-sub));
+}
+
+.brand .eyebrow {
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+.brand .eyebrow::before {
+  content: "\2726";
+  margin-right: 0.45rem;
+}
+
+/* --- Hero --- */
+.brand .hero {
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+.brand .hero::after {
+  content: "";
+  position: absolute;
+  top: -220px;
+  right: -180px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(123, 77, 255, 0.22), rgba(255, 63, 164, 0.08) 45%, transparent 68%);
+}
+.brand .hero .container { position: relative; z-index: 1; }
+.brand .hero-tagline {
+  margin-top: 1.4rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.32em;
+  background: linear-gradient(90deg, var(--accent), var(--accent-sub));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* --- ボタン --- */
+.brand .btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-sub));
+  box-shadow: 0 4px 22px rgba(255, 63, 164, 0.35);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.brand .btn-primary:hover {
+  box-shadow: 0 6px 30px rgba(255, 63, 164, 0.55);
+  transform: translateY(-1px);
+}
+.brand .btn-secondary {
+  border-color: rgba(123, 77, 255, 0.5);
+  background: rgba(123, 77, 255, 0.08);
+  transition: border-color 0.2s, background 0.2s;
+}
+.brand .btn-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(255, 63, 164, 0.1);
+}
+
+/* --- カード --- */
+.brand .card {
+  border-color: rgba(123, 77, 255, 0.22);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.brand .card:hover {
+  border-color: rgba(255, 63, 164, 0.55);
+  box-shadow: 0 0 24px rgba(123, 77, 255, 0.18);
+  transform: translateY(-2px);
+}
+.brand .card h3 { letter-spacing: 0.03em; }
+
+/* --- プレースホルダー --- */
+.brand .placeholder {
+  border-color: rgba(123, 77, 255, 0.45);
+  background:
+    linear-gradient(135deg, rgba(255, 63, 164, 0.08), rgba(123, 77, 255, 0.1)),
+    var(--placeholder);
+  color: #a6a6bb;
+}
+
+/* --- プラン --- */
+.brand .featured {
+  outline: none;
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(135deg, var(--accent), var(--accent-sub)) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 0 32px rgba(255, 63, 164, 0.22);
+}
+.brand .price {
+  background: linear-gradient(90deg, var(--accent), var(--accent-sub));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- FAQ / フロー --- */
+.brand summary::marker { color: var(--accent); }
+.brand .flow-list h3 { color: var(--accent); }
+
+/* --- コンタクトCTA --- */
+.brand .contact-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(123, 77, 255, 0.25), transparent 60%),
+    var(--bg-alt);
+}
+
+/* --- フッター --- */
+.brand .site-footer {
+  border-top: 1px solid rgba(123, 77, 255, 0.28);
+  background: #08080e;
+}
+.brand .footer-tagline {
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .brand .global-nav {
+    background: rgba(11, 11, 18, 0.98);
+    border-bottom: 1px solid rgba(123, 77, 255, 0.35);
+  }
+  .brand .brand-mark { width: 32px; height: 32px; }
+}

@@ -9,12 +9,32 @@
       content="Astryve Designは、社内にデザイナーがいない企業・団体向けにSNS・Web・資料・告知物を継続支援するデザインパートナーです。"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="brand.css" />
   </head>
-  <body>
+  <body class="brand">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="astryve-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff3fa4" />
+          <stop offset="100%" stop-color="#7b4dff" />
+        </linearGradient>
+      </defs>
+      <symbol id="astryve-star" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="56" rx="46" ry="13" transform="rotate(-18 50 56)" fill="none" stroke="url(#astryve-grad)" stroke-width="5" opacity=".9" />
+        <path d="M50 6 L60.5 38.5 L94 38.5 L67 58.5 L77.5 90 L50 70.5 L22.5 90 L33 58.5 L6 38.5 L39.5 38.5 Z" fill="url(#astryve-grad)" />
+        <path d="M82 10 l2.6 6.4 6.4 2.6 -6.4 2.6 -2.6 6.4 -2.6 -6.4 -6.4 -2.6 6.4 -2.6 z" fill="#f7f7fa" />
+      </symbol>
+    </svg>
     <!-- Header -->
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a href="#top" class="logo" aria-label="Astryve Design トップへ">Astryve Design</a>
+        <a href="#top" class="logo brand-logo" aria-label="Astryve Design トップへ">
+          <svg class="brand-mark" aria-hidden="true"><use href="#astryve-star" /></svg>
+          <span class="brand-text">
+            <span class="brand-name"><span class="grad">A</span>STRYVE</span>
+            <span class="brand-sub">DESIGN</span>
+          </span>
+        </a>
 
         <button class="menu-toggle" aria-controls="global-nav" aria-expanded="false" aria-label="メニューを開く">
           <span></span><span></span><span></span>
@@ -41,7 +61,7 @@
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">法人・団体向け 月額クリエイティブ支援</p>
-            <h1 id="hero-title">社内にデザイナーがいない企業・団体のための<br />月額クリエイティブ支援</h1>
+            <h1 id="hero-title">社内にデザイナーがいない企業・団体のための<br /><span class="grad">月額クリエイティブ支援</span></h1>
             <p class="lead">
               SNS・Web・営業資料・採用資料・告知物など、毎月発生するデザイン制作を継続的に支援します。
             </p>
@@ -49,6 +69,7 @@
               <a class="btn btn-primary" href="#contact">無料相談する</a>
               <a class="btn btn-secondary" href="#service">サービスを見る</a>
             </div>
+            <p class="hero-tagline">✦ 星のように輝く世界へ ✦</p>
           </div>
 
           <div class="hero-visual" aria-label="制作物のプレースホルダー">
@@ -186,8 +207,15 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <p class="logo">Astryve Design</p>
-          <p>星のように輝く世界へ。<br />法人・団体向けの月額クリエイティブ支援。</p>
+          <p class="logo brand-logo">
+            <svg class="brand-mark" aria-hidden="true"><use href="#astryve-star" /></svg>
+            <span class="brand-text">
+              <span class="brand-name"><span class="grad">A</span>STRYVE</span>
+              <span class="brand-sub">DESIGN</span>
+            </span>
+          </p>
+          <p class="footer-tagline grad">星のように輝く世界へ</p>
+          <p>法人・団体向けの月額クリエイティブ支援。</p>
         </div>
         <nav aria-label="フッターナビゲーション">
           <ul>
